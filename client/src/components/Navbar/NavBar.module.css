@@ -2,6 +2,10 @@
   background-color: #405d72 !important;
 
   height: 7.5vh;
+
+  border-radius: 5vh !important;
+
+  z-index: 10;
 }
 
 .loginButton {

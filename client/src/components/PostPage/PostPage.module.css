@@ -1,0 +1,88 @@
+.container {
+  padding: 3vw;
+  padding-top: 2vw;
+
+  margin-left: 5vw;
+  margin-top: 5vh;
+
+  width: 90vw;
+  height: 82.5vh;
+
+  background-color: #b4b4b8;
+
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 10px whitesmoke, -2px -2px 10px whitesmoke,
+    inset 0.1px 0.1px 10px black, inset -0.1px -0.1px 10px black;
+
+  overflow-y: auto;
+
+  z-index: 0;
+}
+
+.container > h1 {
+  font-size: 7.5vh;
+}
+
+.detContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+
+  gap: 3vh;
+
+  padding-top: 3vh;
+}
+
+.popUpDiv {
+  position: absolute;
+
+  padding-top: 0;
+
+  margin-top: 5vh;
+
+  width: 100vw;
+  height: 87vh;
+
+  z-index: 2;
+
+  bottom: -82.5vh;
+  left: 0;
+
+  background-color: aqua;
+
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+}
+
+.wholePage {
+  height: 92.5vh;
+  width: 100%;
+
+  position: relative;
+
+  overflow-y: hidden;
+}
+
+.popUpButton {
+  background-color: transparent;
+  border: none;
+
+  width: 100vw;
+  height: 4vh;
+}
+
+.bgDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: black;
+
+  opacity: 0.4;
+
+  z-index: -100;
+
+  width: 100vw;
+  height: 100vh;
+}

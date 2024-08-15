@@ -28,5 +28,5 @@ const usersCollection = db.collection("users");
 
 //Listening on 4000
 app.listen(4000, () => {
-  console.log("Listening on 3000.");
+  console.log("Listening on 4000.");
 });
