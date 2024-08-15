@@ -3,10 +3,10 @@
   padding-top: 2vw;
 
   margin-left: 5vw;
-  margin-top: 5vh;
+  margin-top: 3vh;
 
   width: 90vw;
-  height: 82.5vh;
+  height: 80.5vh;
 
   background-color: #b4b4b8;
 
@@ -44,24 +44,28 @@
   width: 100vw;
   height: 87vh;
 
-  z-index: 2;
+  z-index: 5;
 
   bottom: -82.5vh;
   left: 0;
 
-  background-color: aqua;
+  background-color: #758694;
 
   border-top-left-radius: 1vh;
   border-top-right-radius: 1vh;
+
+  transition: all 1s ease-in-out;
 }
 
 .wholePage {
-  height: 92.5vh;
+  height: 90.5vh;
   width: 100%;
 
   position: relative;
 
   overflow-y: hidden;
+
+  /* border: solid yellow 2px; */
 }
 
 .popUpButton {
@@ -70,6 +74,10 @@
 
   width: 100vw;
   height: 4vh;
+
+  text-align: center;
+
+  color: #fff8f3;
 }
 
 .bgDiv {
@@ -81,8 +89,34 @@
 
   opacity: 0.4;
 
-  z-index: -100;
+  z-index: -1;
 
   width: 100vw;
   height: 100vh;
+}
+
+.formContainer {
+  margin-top: 2vh;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 2vh 2vw;
+}
+
+.formContainer form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 7vh;
+}
+
+.formContainer form h1 {
+  grid-column: span 3;
+  text-align: center;
+}
+
+#span2 {
+  grid-column: span 2;
 }

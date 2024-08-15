@@ -22,6 +22,8 @@ const client = new MongoClient(process.env.MONGO_URI, {
   },
 });
 
+app.get('/')
+
 //Define Collections here
 const db = client.db("MobilityFuture");
 const usersCollection = db.collection("users");

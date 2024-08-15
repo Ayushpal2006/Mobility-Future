@@ -1,26 +1,27 @@
 import React from "react";
 import styles from "./PostPage.module.css";
 import $ from "jquery";
+import JobForm from "./JobForm/JobForm";
 
 export default function PostPage() {
   function popUp() {
-    $(`#bgDiv`).css("z-index", "2");
-    $(`#popUpDiv`).css({ transform: "translateY(-83.5vh)", "z-index": "3" });
-    $("#popUpButton").hide();
-    $("#popDownButton").show();
+    $(`#bgDiv`).css("z-index", "4");
+    $(`#popUpDiv`).css({ transform: "translateY(-83.5vh)", "z-index": "5" });
+    $("#popUpBut").hide();
+    $("#popDownBut").show();
   }
 
   function popDown() {
     $(`#bgDiv`).css("z-index", "-100");
-    $(`#popUpDiv`).css({ transform: "translateY(0)", "z-index": "1" });
-    $("#popDownButton").hide();
-    $("#popUpButton").show();
+    $(`#popUpDiv`).css({ transform: "translateY(0)" });
+    $("#popDownBut").hide();
+    $("#popUpBut").show();
   }
 
   return (
     <div className={styles.wholePage}>
       <div className={styles.container}>
-        <h1 className="amsterdam">Create a Job</h1>
+        <h1 className="amsterdam">Creating a Job</h1>
         <div className={`${styles.detContainer} moderustic`}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil culpa
@@ -52,13 +53,7 @@ export default function PostPage() {
             delectus reprehenderit, doloribus beatae? Vero, est laboriosam.
             Aliquam, exercitationem reiciendis? Aut veniam aspernatur alias
             numquam placeat. Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit. Dolor facilis illum optio recusandae amet. Sequi suscipit
-            laborum at distinctio corrupti cupiditate delectus voluptates
-            nostrum, repudiandae fugit eveniet saepe optio possimus? Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Alias ex sapiente
-            amet. Ullam sit voluptatum consequuntur velit, nisi aspernatur alias
-            fugit voluptate, modi iusto nemo facere eos? Similique, ratione
-            quod.
+            elit.
           </p>
           <div>
             <h3 className="amsterdam">Points to remember:-</h3>
@@ -100,7 +95,7 @@ export default function PostPage() {
       </div>
       <div className={styles.popUpDiv} id="popUpDiv">
         <button className={styles.popUpButton} onClick={popUp} id="popUpBut">
-          Create a Job <img />
+          <h2 className="amsterdam">Create a Job</h2> <img />
         </button>
         <button
           className={styles.popUpButton}
@@ -108,8 +103,9 @@ export default function PostPage() {
           onClick={popDown}
           id="popDownBut"
         >
-          Collapse <img />
+          <h2 className="amsterdam">Collapse</h2> <img />
         </button>
+        <JobForm />
       </div>
       <div className={styles.bgDiv} id="bgDiv"></div>
     </div>

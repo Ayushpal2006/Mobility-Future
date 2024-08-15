@@ -1,6 +1,8 @@
 body {
   background-color: #758694;
   color: #31363f;
+
+  overflow-x: hidden;
 }
 
 .amsterdam {
@@ -18,6 +20,8 @@ body {
 
 #root {
   width: 100vw;
+  min-height: 100vh;
+  overflow-y: hidden;
 }
 
 .Test {
@@ -34,4 +38,42 @@ body {
   padding: 2vw;
 
   box-shadow: 1px 1px 10px black, -1px -1px 10px black;
+}
+@media (max-width: 992px) {
+  #navbarSupportedContent {
+    background-color: #405d72 !important;
+
+    margin-top: 3vh;
+
+    padding: 1vh 2vw;
+
+    border-radius: 8px;
+
+    height: 30vh;
+  }
+
+  #navbarSupportedContent > ul {
+    height: 70%;
+    width: 100%;
+
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vh;
+  }
+
+  #navbarSupportedContent > button {
+    margin-left: 1vw;
+    margin-top: 1vh;
+  }
+
+  #navbarSupportedContent > ul > li,
+  #navbarSupportedContent > button {
+    width: 20vw;
+  }
 }
