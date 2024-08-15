@@ -1,0 +1,57 @@
+#navId {
+  background-color: #405d72 !important;
+
+  height: 7.5vh;
+}
+
+.loginButton {
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  width: 7vw;
+  height: 4.5vh;
+
+  transition: all 0.5s ease-in-out;
+
+  color: #fff8f3 !important;
+}
+
+.loginButton:hover {
+  background-color: #f7e7dc;
+  color: black !important;
+}
+
+#navId li {
+  border-radius: 5px;
+  width: 7vw;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 1vw;
+
+  transition: all 0.5s ease-in-out;
+}
+
+#navId li:hover {
+  background-color: #f7e7dc;
+}
+
+#navId li:hover a {
+  color: #222831 !important;
+}
+
+#navbarMargin {
+  margin-left: 1vw;
+  width: 7vw;
+  margin-right: 0;
+
+  color: #fff8f3 !important;
+}
+
+#navId li a {
+  color: #fff8f3 !important;
+
+  vertical-align: middle;
+}
