@@ -7,11 +7,22 @@ import { default as mongodb, ObjectId, ServerApiVersion } from "mongodb";
 
 let MongoClient = mongodb.MongoClient;
 
+
+
 const app = express();
-const saltRounds = 10;
+
+
+const saltRounds = 10;  
+
+
 env.config();
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true })); 
+
 app.use(cors());
 
 const client = new MongoClient(process.env.MONGO_URI, {
