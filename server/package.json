@@ -13,5 +13,6 @@
   "scripts": {
     "start": "node index.js",
     "startmon": "nodemon index.js"
-  }
+  },
+  "type": "module"
 }
