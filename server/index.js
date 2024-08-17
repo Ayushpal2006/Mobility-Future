@@ -23,6 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors());
 
@@ -37,11 +39,10 @@ const client = new MongoClient(process.env.MONGO_URI, {
   },
 });
 
-app.get('/')
-
 //Define Collections here
 const db = client.db("MobilityFuture");
 const usersCollection = db.collection("users");
+const postsCollection = db.collection("posts");
 
 // Starting the server
 const PORT = process.env.PORT || 4000;

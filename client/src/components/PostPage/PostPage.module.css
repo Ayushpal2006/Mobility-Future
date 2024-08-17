@@ -107,9 +107,9 @@
 .formContainer form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-  gap: 7vh;
+  gap: 5vh;
 }
 
 .formContainer form h1 {
@@ -119,4 +119,46 @@
 
 #span2 {
   grid-column: span 2;
+}
+
+.submitCont {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitCont > button {
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  width: 7vw;
+  height: 6vh;
+
+  transition: all 0.5s ease-in-out;
+
+  color: #fff8f3;
+
+  border: solid black 1px;
+}
+
+.submitCont > button:hover {
+  background-color: #405d72;
+  /* color: black; */
+}
+
+@media screen and (max-width: 590px) {
+  .formContainer form {
+    display: block;
+  }
+
+  .formContainer form > div {
+    margin-top: 3vh;
+  }
+  .popUpDiv {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .formContainer form button {
+    width: 50vw;
+  }
 }
