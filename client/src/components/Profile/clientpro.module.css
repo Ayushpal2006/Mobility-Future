@@ -1,0 +1,73 @@
+/* Profile.css */
+.procast{
+  border: 2px solid black;
+  border-radius: 1%;
+  margin-top: 3vh !important;
+  margin:auto;
+  box-shadow: 10px 10px 8px #333;
+  offset: 5;
+  max-height: 95vh;
+  max-width: 95vw;
+  padding: 1%;
+
+  
+}
+img{
+  max-width: 5vh;
+  max-height: 5vh;
+  border-radius: 100%;
+  margin-right: 1%;
+}
+
+
+  
+  .user {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 1vh;
+   
+  }
+  .user:hover{
+    text-align: center;
+    font-size: xx-large;
+  }
+  
+  .cid {
+    font-size:x-large;
+    color: #874343;
+    margin-bottom: 2vh;
+  }
+  
+  .middle {
+    font-size:x-large;
+  
+  }
+  
+  .middle div {
+    margin-bottom: 1%;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .user_id, .mail, .cargo, .resident, .Cadd {
+    font-size: 16px;
+    color: #333;
+    border: 1px solid rgb(73, 65, 65);
+    border-radius: 1%;
+    padding: 1.5%
+  }
+  .user_id, .mail, .cargo, .resident, .Cadd{:hover{
+    
+    font-size: x-large;
+ 
+
+  }}
+  
+  .middle2 {
+    margin-top: 20px;
+  }
+  
