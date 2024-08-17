@@ -4,14 +4,14 @@ const userSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    role: { type: String, enum: ["client", "driver"], required: true },
+    password: { type: String, required: true }, // Ensure it's hashed before saving
+    role: { type: String, enum: ["client", "trucker"], required: true }, // Role of the user
     phoneNumber: { type: String, required: true },
-    profilePicture: { type: String },
-    rating: { type: Number, default: 0 },
+    profilePicture: { type: String }, // URL to profile picture (optional)
+    rating: { type: Number, default: 0 }, // Average rating for truckers
   },
   { timestamps: true }
-);
+); // Automatically adds createdAt and updatedAt fields
 
 const User = mongoose.model("User", userSchema);
 
