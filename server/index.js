@@ -32,18 +32,18 @@ app.use(cors());
 // Routes
 app.use("/api/v1/auth", authRouter);
 
-const client = new MongoClient(process.env.MONGO_URI, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
+// const client = new MongoClient(process.env.MONGO_URI, {
+//   serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   },
+// });
 
-//Define Collections here
-const db = client.db("MobilityFuture");
-const usersCollection = db.collection("users");
-const postsCollection = db.collection("posts");
+// //Define Collections here
+// const db = client.db("MobilityFuture");
+// const usersCollection = db.collection("users");
+// const postsCollection = db.collection("posts");
 
 // Starting the server
 const PORT = process.env.PORT || 4000;
