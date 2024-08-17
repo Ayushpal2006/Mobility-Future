@@ -1,6 +1,6 @@
-import jwt from "jsonwebtoken"
+import jwt from 'jsonwebtoken';
 
-function generateToken(user) {
+export function generateToken(user) {
     try {
         const token = jwt.sign(
             { email: user.email, id: user._id },
@@ -13,5 +13,3 @@ function generateToken(user) {
         throw new Error('Token generation failed');
     }
 }
-
-module.exports.generateToken = generateToken;
