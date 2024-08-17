@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./PostPage.module.css";
 import $ from "jquery";
 import JobForm from "./JobForm/JobForm";
@@ -105,7 +105,7 @@ export default function PostPage() {
         >
           <h2 className="amsterdam">Collapse</h2> <img />
         </button>
-        <JobForm />
+        <JobForm func={popDown} />
       </div>
       <div className={styles.bgDiv} id="bgDiv"></div>
     </div>
