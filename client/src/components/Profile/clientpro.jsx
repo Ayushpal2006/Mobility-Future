@@ -1,51 +1,59 @@
 import React from "react";
-//import './clientpro.css'
-import styles from './clientpro.module.css'
-import { useState } from "react";
-const profileimg  = "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
-
-
+import styles from "./clientpro.module.css";
+const profileimg =
+  "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png";
 
 function Profile() {
-    return (
-        <>
-        <div className={styles.procast}>
-
-            <div className={styles.user}>
-            <span><img src={profileimg} alt="loading"  /></span>
-                rohit sharma</div>
-            <p className="cid">`Client id = ${Math.floor(10000000*Math.random())}`</p>
-            <div className="middle">
-
-                <div className={styles.user_id}>
-                    <label htmlFor="userName">userName</label>
-                    setuserName</div>
-
-                <div className={styles.mail}>
-                    <label htmlFor="Email">Email</label>
-                    setemail</div>
-
-                <div className={styles.cargo}>
-                    <label htmlFor="cargo">cargo</label>
-                    setTypeofCargo</div>
-
-                <div className={styles.resident}>
-                    <label htmlFor="resident">resident</label>
-                    setplace</div>
-
-                <div className={styles.Cadd}>
-                    <label htmlFor="Comp.Address">Comp.Address</label>
-                    setcompleteAdd</div>
-
-            </div>
-            <div className={styles.middle2}>
-
-            </div>
-
-
+  return (
+    <>
+      <div className={styles.procast}>
+        <div className={`${styles.user} amsterdam`}>
+          <span>
+            <img src={profileimg} alt="loading" />
+          </span>
+          <h1>Rohit Sharma</h1>
         </div>
-
-        </>
-    )
+        <div className={`moderustic ${styles.detailDiv}`}>
+          <div className="middle">
+            <div className={styles.user_id}>
+              <label htmlFor="userName">
+                <h2>userName</h2>
+              </label>
+              <h5>setuserName</h5>
+            </div>
+            <hr />
+            <div className={styles.mail}>
+              <label htmlFor="Email">
+                <h2>Email</h2>
+              </label>
+              <h5>setemail</h5>
+            </div>
+            <hr />
+            <div className={styles.cargo}>
+              <label htmlFor="cargo">
+                <h2>cargo</h2>
+              </label>
+              <h5>setTypeofCargo</h5>
+            </div>
+            <hr />
+            <div className={styles.resident}>
+              <label htmlFor="resident">
+                <h2>resident</h2>
+              </label>
+              <h5>setplace</h5>
+            </div>
+            <hr />
+            <div className={styles.Cadd}>
+              <label htmlFor="Comp.Address">
+                <h2>Comp.Address</h2>
+              </label>
+              <h5>setcompleteAdd</h5>
+            </div>
+          </div>
+          <div className={styles.middle2}></div>
+        </div>
+      </div>
+    </>
+  );
 }
-export default Profile
+export default Profile;
