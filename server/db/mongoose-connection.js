@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
 
 const connectDB = async () => {
-  const DB_NAME = "Mobility-Future";
-  const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017";
+  const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/mobility";
   try {
     const connectionInstance = await mongoose.connect(
-      `${MONGO_URI}/${DB_NAME}`,
+      `${MONGO_URI}`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
