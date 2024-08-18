@@ -1,0 +1,37 @@
+.container {
+  padding: 3vw;
+  padding-top: 2vw;
+  padding-bottom: 0.75vh;
+
+  margin-left: 5vw;
+  margin-top: 5vh;
+
+  width: 90vw;
+  height: 80.5vh;
+
+  background-color: #b4b4b8;
+
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 10px whitesmoke, -2px -2px 10px whitesmoke,
+    inset 0.1px 0.1px 10px black, inset -0.1px -0.1px 10px black;
+
+  overflow-y: hidden;
+
+  z-index: 0;
+}
+
+.container h1 {
+  font-size: 7vh;
+}
+
+.container > div {
+  width: 100%;
+  height: 60vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  border: solid yellow 1px;
+}

@@ -2,7 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Navbar/Layout";
 import PostPage from "./PostPage/PostPage";
-import Clientpro from "./Profile/clientpro";
+import ClientPro from "./Profile/clientpro";
+import SearchPage from "./SearchPage/SearchPage";
+import OurProfileRenderer from "./OurProfile/OurProfileRenderer";
+import ContactUs from "./ContactUs/ContactUs";
+import AboutUs from "./AboutUs/AboutUs";
 
 function App() {
   return (
@@ -18,7 +22,11 @@ function App() {
             }
           />
           <Route path="/postJob" element={<PostPage />} />
-          <Route path="/Account" element={<Clientpro/>} />
+          <Route path="/account" element={<ClientPro />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/ourProfile/:id" element={<OurProfileRenderer />} />
+          <Route path="/contactUs" element={<ContactUs />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
         </Route>
       </Routes>
     </Router>
