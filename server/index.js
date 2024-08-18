@@ -7,6 +7,7 @@ import { default as mongodb, ObjectId, ServerApiVersion } from "mongodb";
 import cookieParser from 'cookie-parser';
 import connectDB from "./db/mongoose-connection.js";
 import authRouter from "./routes/auth.js";
+import postRouter from './routes/postJob.js'
 
 // Load environment variables
 dotenv.config();
@@ -30,7 +31,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // Routes
-app.use("/api/v1/auth", authRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/postJob", postRouter);
 
 // const client = new MongoClient(process.env.MONGO_URI, {
 //   serverApi: {
