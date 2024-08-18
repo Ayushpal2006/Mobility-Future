@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styles from "./OurProfile.module.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import OurProfile from "./components/OurProfile";
@@ -12,12 +11,12 @@ export default function OurProfileRenderer() {
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
-        `https://api.npoint.io/ad4ff40dd650debeaae2/${id}`
+        `https://api.npoint.io/4109d16f660f206466d4/${id}`
       );
       setData(result.data);
     };
     getData();
-  }, []);
+  }, [id]);
 
   console.log(data);
 
