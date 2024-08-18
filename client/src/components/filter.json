@@ -1,0 +1,58 @@
+{
+  "fromCity": [
+    {
+      "name": "New Delhi",
+      "value": "delhi"
+    },
+    {
+      "name": "Gurugram",
+      "value": "gurugram"
+    },
+    {
+      "name": "Noida",
+      "value": "noida"
+    }
+  ],
+  "fare": [
+    {
+      "name": ">2000",
+      "value": "2000"
+    },
+    {
+      "name": ">5000",
+      "value": "5000"
+    },
+    {
+      "name": ">10000",
+      "value": "10000"
+    }
+  ],
+  "weight": [
+    {
+      "name": ">50 Kg",
+      "value": "50"
+    },
+    {
+      "name": ">100 Kg",
+      "value": "100"
+    },
+    {
+      "name": ">500kg",
+      "value": "500"
+    }
+  ],
+  "date": [
+    {
+      "name": "Last Week",
+      "value": "hr:168"
+    },
+    {
+      "name": "Last Day",
+      "value": "hr:24"
+    },
+    {
+      "name": "Last Month",
+      "value": "hr:720"
+    }
+  ]
+}
