@@ -1,9 +1,9 @@
-import express from 'express';
+import express from "express";
 const router = express.Router();
 
-import PostJob from '../models/postJobModel.js';
+import PostJob from "../models/postJobModel.js";
 
-router.post('/', async function (req, res) {
+router.post("/", async function (req, res) {
   const {
     email,
     cust_name,
@@ -14,7 +14,8 @@ router.post('/', async function (req, res) {
     to_addr,
     cargo_name,
     cargo_weight,
-    fare
+    fare,
+    driver,
   } = req.body;
 
   try {
@@ -28,19 +29,20 @@ router.post('/', async function (req, res) {
       to_addr,
       cargo_name,
       cargo_weight,
-      fare
+      fare,
+      driver,
     });
 
     res.status(201).json({
       success: true,
-      message: 'Job posted successfully',
-      job: postModel
+      message: "Job posted successfully",
+      job: postModel,
     });
   } catch (error) {
     res.status(500).json({
       success: false,
-      message: 'An error occurred while posting the job',
-      error: error.message
+      message: "An error occurred while posting the job",
+      error: error.message,
     });
   }
 });
