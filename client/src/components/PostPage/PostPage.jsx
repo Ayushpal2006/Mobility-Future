@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./PostPage.module.css";
 import $ from "jquery";
 import JobForm from "./JobForm/JobForm";
@@ -95,7 +95,7 @@ export default function PostPage() {
       </div>
       <div className={styles.popUpDiv} id="popUpDiv">
         <button className={styles.popUpButton} onClick={popUp} id="popUpBut">
-          <h2 className="amsterdam">Create a Job</h2> <img />
+          <h2 className="amsterdam">Create a Job</h2> <img alt="arrow" />
         </button>
         <button
           className={styles.popUpButton}
@@ -103,7 +103,7 @@ export default function PostPage() {
           onClick={popDown}
           id="popDownBut"
         >
-          <h2 className="amsterdam">Collapse</h2> <img />
+          <h2 className="amsterdam">Collapse</h2> <img alt="arrow" />
         </button>
         <JobForm func={popDown} />
       </div>

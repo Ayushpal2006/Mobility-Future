@@ -3,7 +3,6 @@ import styles from "../PostPage.module.css";
 import InputField from "../../GeneralComponents/InputField";
 import $ from "jquery";
 import axios from "axios";
-import LoadingSpinner from "../../LoadingSpinner/LoadingSpinner";
 
 export default function JobForm(props) {
   async function postForm(e) {
@@ -40,6 +39,17 @@ export default function JobForm(props) {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
+    $("input[name='email']").val("");
+    $("input[name='cust_contact']").val("");
+    $("input[name='cust_name']").val("");
+    $("input[name='from_city']").val("");
+    $("input[name='from_addr']").val("");
+    $("input[name='to_city']").val("");
+    $("input[name='to_addr']").val("");
+    $("input[name='cargo_name']").val("");
+    $("input[name='cargo_weight']").val("");
+    $("input[name='fare']").val("");
+    $("#submitButtonJobForm").text("Created");
     $("#submitButtonJobForm").text("Created");
     props.func();
     $("#submitButtonJobForm").text("Submit");

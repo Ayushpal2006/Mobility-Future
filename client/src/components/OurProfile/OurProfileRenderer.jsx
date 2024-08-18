@@ -18,7 +18,5 @@ export default function OurProfileRenderer() {
     getData();
   }, [id]);
 
-  console.log(data);
-
   return <OurProfile data={data} />;
 }

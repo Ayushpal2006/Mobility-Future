@@ -1,8 +1,11 @@
 body {
-  background-color: #758694;
-  color: #31363f;
+  background-color: #31363f !important;
+  color: #31363f !important;
 
   overflow-x: hidden;
+  overflow-y: hidden;
+
+  z-index: -10;
 }
 
 .amsterdam {
