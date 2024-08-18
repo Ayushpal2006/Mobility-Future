@@ -16,5 +16,8 @@
     "start": "node index.js",
     "startmon": "nodemon index.js"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.4.0"
+  }
 }
