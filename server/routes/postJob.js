@@ -1,18 +1,48 @@
-import express from "express";
+import express from 'express';
 const router = express.Router();
-import { default as mongodb, ObjectId, ServerApiVersion } from "mongodb";
 
-router.post("/", async (req, res) => {
-  let MongoClient = mongodb.MongoClient;
+import PostJob from '../models/postJobModel.js';
 
-  MongoClient.connect(
-    `${process.env.MONGO_URI}/MobilityFuture`,
-    function (err, db) {
-      const postsCollection = db.collection("posts");
-      postsCollection.insertOne(req.body);
-    }
-  );
-  res.send(200);
+router.post('/', async function (req, res) {
+  const {
+    email,
+    cust_name,
+    cust_contact,
+    from_city,
+    from_addr,
+    to_city,
+    to_addr,
+    cargo_name,
+    cargo_weight,
+    fare
+  } = req.body;
+
+  try {
+    const postModel = await PostJob.create({
+      email,
+      cust_name,
+      cust_contact,
+      from_city,
+      from_addr,
+      to_city,
+      to_addr,
+      cargo_name,
+      cargo_weight,
+      fare
+    });
+
+    res.status(201).json({
+      success: true,
+      message: 'Job posted successfully',
+      job: postModel
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'An error occurred while posting the job',
+      error: error.message
+    });
+  }
 });
 
 export default router;

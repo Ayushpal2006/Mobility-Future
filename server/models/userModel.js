@@ -1,46 +1,18 @@
 import mongoose from "mongoose";
-const { Schema } = mongoose;
 
-const userSchema = new Schema(
+const userSchema = new mongoose.Schema(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
-    img: {
-      type: String,
-      required: false,
-    },
-    country: {
-      type: String,
-      required: true,
-    },
-    phone: {
-      type: String,
-      required: false,
-    },
-    desc: {
-      type: String,
-      required: false,
-    },
-    isTrucker: {
-      type: Boolean,
-      default: false,
-    },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true }, // Ensure it's hashed before saving
+    role: { type: String, enum: ["client", "trucker"], required: true }, // Role of the user
+    phoneNumber: { type: String, required: true },
+    profilePicture: { type: String }, // URL to profile picture (optional)
+    rating: { type: Number, default: 0 }, // Average rating for truckers
   },
-  {
-    timestamps: true,
-  }
-);
+  { timestamps: true }
+); // Automatically adds createdAt and updatedAt fields
 
-export default mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+
+export default User;
