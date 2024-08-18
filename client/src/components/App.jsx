@@ -7,20 +7,14 @@ import SearchPage from "./SearchPage/SearchPage";
 import OurProfileRenderer from "./OurProfile/OurProfileRenderer";
 import ContactUs from "./ContactUs/ContactUs";
 import AboutUs from "./AboutUs/AboutUs";
+import NewNavbar from "./NewNavbar/newNavbar";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route
-            path="/home"
-            element={
-              <div className="Test">
-                <h1>xHome</h1>
-              </div>
-            }
-          />
+          <Route path="/home" element={<NewNavbar />} />
           <Route path="/postJob" element={<PostPage />} />
           <Route path="/account" element={<ClientPro />} />
           <Route path="/search" element={<SearchPage />} />
