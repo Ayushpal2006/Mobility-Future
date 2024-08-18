@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Navbar/Layout";
 import PostPage from "./PostPage/PostPage";
 import Clientpro from "./Profile/clientpro";
+import Application from "./Profile/Application";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           />
           <Route path="/postJob" element={<PostPage />} />
           <Route path="/Account" element={<Clientpro/>} />
+          <Route path="/Apple" element={<Application/>} />
         </Route>
       </Routes>
     </Router>
