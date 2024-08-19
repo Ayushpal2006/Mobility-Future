@@ -7,7 +7,7 @@
   margin-top: 3vh;
 
   width: 98vw;
-  height: 85.5vh;
+  height: 82.5vh;
 
   background-color: #b4b4b8;
 
@@ -96,4 +96,32 @@
   margin-bottom: 1vh;
 
   border-radius: 10px;
+
+  position: relative;
+}
+
+.postCardContainer button {
+  position: absolute;
+  bottom: 1vh;
+  right: 1vw;
+
+  width: 10vw;
+
+  color: black;
+}
+
+.postCardContainer button:hover {
+  background-color: #758694;
+  color: whitesmoke;
+}
+
+/* img {
+  position: absolute;
+  top: 5vh;
+  height: 30vh;
+  width: 30vh;
+} */
+
+.logoCont {
+  border: solid green 1px;
 }

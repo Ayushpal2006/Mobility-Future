@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./AboutUs.module.css";
 
 export default function AboutUs() {
-  const company_name = "company_name";
+  const company_name = "TranspoHub";
 
   return (
     <div className={styles.container}>

@@ -17,6 +17,7 @@ export default function PostCard() {
       <h5>
         Fare: <span>{"{fare}"}</span>
       </h5>
+      <button>Apply</button>
     </div>
   );
 }

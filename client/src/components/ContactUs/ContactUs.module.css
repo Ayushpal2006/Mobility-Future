@@ -6,7 +6,7 @@
   margin-top: 3vh;
 
   width: 90vw;
-  height: 85.5vh;
+  height: 82.5vh;
 
   background-color: #b4b4b8;
 
@@ -45,6 +45,7 @@
 .formDiv form div:nth-child(3) {
   grid-column: span 2;
   margin-left: 7vw;
+  width: 70vw;
 }
 
 .formDiv > form > div:has(input) {
@@ -61,8 +62,12 @@
 }
 
 .formDiv button {
-  margin-left: 30vw;
+  margin-left: 35vw;
   margin-top: 5vh;
+  max-width: 10vw;
+  min-width: auto;
+
+  grid-column: span 2;
   color: black;
 }
 
