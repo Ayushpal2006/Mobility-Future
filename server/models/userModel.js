@@ -8,7 +8,6 @@ const userSchema = new mongoose.Schema(
     role: { type: String, enum: ["client", "trucker"], required: true }, // Role of the user
     phoneNumber: { type: String, required: true },
     profilePicture: { type: String }, // URL to profile picture (optional)
-    rating: { type: Number, default: 0 }, // Average rating for truckers
   },
   { timestamps: true }
 ); // Automatically adds createdAt and updatedAt fields

@@ -5,7 +5,7 @@ import { generateToken } from '../utils/generateToken.js';
 
 export const register = async (req, res, next) => {
   try {
-    const { name, email, password, role, phoneNumber, profilePicture, rating } = req.body;
+    const { name, email, password, role, phoneNumber, profilePicture} = req.body;
 
     const alreadyUser = await userModel.findOne({ email });
     if (alreadyUser) {
@@ -25,7 +25,6 @@ export const register = async (req, res, next) => {
       role,
       phoneNumber,
       profilePicture,
-      rating,
     });
 
     const token = generateToken(user);
