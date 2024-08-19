@@ -111,7 +111,7 @@
 
     z-index: 1;
   }
-  button {
+  .nav button {
     min-width: 10vw;
   }
 }
@@ -136,7 +136,7 @@
   }
 }
 
-button {
+.nav button {
   background-color: transparent;
   border: none;
 
@@ -157,7 +157,7 @@ button {
   margin-right: 1vw;
 }
 
-li {
+.nav li {
   border-radius: 5px;
   width: 7vw;
 
@@ -168,7 +168,7 @@ li {
   text-align: center;
 }
 
-button:hover {
+.nav button:hover {
   background-color: #f7e7dc;
   color: black;
 }
@@ -177,7 +177,7 @@ button:hover {
   position: relative;
 }
 
-img {
+.nav img {
   display: block !important;
   position: absolute;
   top: -3.8vh;

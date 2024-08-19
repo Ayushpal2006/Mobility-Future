@@ -8,12 +8,14 @@ import OurProfileRenderer from "./OurProfile/OurProfileRenderer";
 import ContactUs from "./ContactUs/ContactUs";
 import AboutUs from "./AboutUs/AboutUs";
 import Footer from "./Footer/Footer";
+import Login from "./Login/Login";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Login />} />
           <Route path="/home" element={<Footer />} />
           <Route path="/postJob" element={<PostPage />} />
           <Route path="/account" element={<ClientPro />} />

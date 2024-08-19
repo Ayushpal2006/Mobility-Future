@@ -11,7 +11,7 @@ export default function OurProfile(props) {
   return (
     <div className={styles.container}>
       <div className={styles.imgCont}>
-        <img alt="profile picture" src={profile} id={styles.profilePic} />
+        <img alt="profile" src={profile} id={styles.profilePic} />
       </div>
       <div className={styles.nameCont}>
         <h1

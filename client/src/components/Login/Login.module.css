@@ -1,0 +1,74 @@
+.container {
+  padding: 3vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+
+  margin-left: 20vw;
+  margin-top: 20vh;
+
+  width: 60vw;
+  height: 60.5vh;
+
+  overflow-y: hidden;
+
+  z-index: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  gap: 2vw;
+}
+
+.container > div {
+  width: 100%;
+  height: 100%;
+
+  background-color: #b4b4b8;
+
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 10px whitesmoke, -2px -2px 10px whitesmoke,
+    inset 0.1px 0.1px 10px black, inset -0.1px -0.1px 10px black;
+}
+
+.container > div h1 {
+  text-align: center;
+  font-size: 5vh;
+}
+
+.logFormDiv form {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.container form > div {
+  width: 70%;
+  max-height: 5vh;
+
+  margin-left: 15%;
+}
+
+.container form > button {
+  width: 10vw;
+  margin-left: 7.5vw;
+}
+
+.RegFormDiv form {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.regFormDiv,
+.logFormDiv {
+  width: 100%;
+  height: 100%;
+}
