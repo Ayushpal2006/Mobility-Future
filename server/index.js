@@ -22,9 +22,9 @@ const app = express();
 // });
 
 //Define Collections here
-const db = client.db("test");
-const usersCollection = db.collection("users");
-const postsCollection = db.collection("postjobs");
+// const db = client.db("test");
+// const usersCollection = db.collection("users");
+// const postsCollection = db.collection("postjobs");
 
 // Middleware
 app.use(express.json());
