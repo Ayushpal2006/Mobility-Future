@@ -35,7 +35,7 @@ const postJobSchema = new mongoose.Schema(
     },
     driver: {
       type: String,
-      default: "",
+      default: "NA",
     },
     cargo_name: {
       type: String,

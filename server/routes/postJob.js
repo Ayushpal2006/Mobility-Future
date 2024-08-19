@@ -47,4 +47,21 @@ router.post("/", async function (req, res) {
   }
 });
 
+  router.get('/driver', async (req, res) => {
+    try {
+      const result = await PostJob.find({ driver: 'NA' });
+      res.status(200).json({
+        success: true,
+        message: 'Filter applied successfully',
+        result: result,
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: 'An error occurred while fetching the jobs',
+        error: error.message,
+      });
+    }
+  });
+
 export default router;
