@@ -178,6 +178,7 @@ button:hover {
 }
 
 img {
+  display: block !important;
   position: absolute;
   top: -3.8vh;
   left: -1.5vw;

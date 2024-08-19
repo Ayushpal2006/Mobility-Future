@@ -2,25 +2,26 @@ import React from "react";
 import styles from "./NewNavbar.module.css";
 import $ from "jquery";
 import { Link } from "react-router-dom";
+import logo from "../../images/TH.png";
 
 export default function newNavbar() {
   function handleUl() {
-    $("ul").toggle();
+    $(`.${styles.nav} ul`).toggle();
   }
 
   $(window).on("resize", function () {
     if ($(window).width() > 990) {
-      $("ul").show();
+      $(`.${styles.nav} ul`).show();
     }
   });
 
   return (
     <nav className={styles.nav}>
-      <ul>
+      <ul id>
         <li id={styles.logoCont}>
           <img
             alt="logo"
-            src="./images/TH_new.png"
+            src={logo}
             style={{ width: "10vw", border: "solid yellow 1px" }}
           />
         </li>
