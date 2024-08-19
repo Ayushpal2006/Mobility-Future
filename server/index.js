@@ -13,6 +13,7 @@ dotenv.config();
 
 const app = express();
 
+let MongoClient = mongodb.MongoClient;
 const client = new MongoClient(process.env.MONGO_URI, {
   serverApi: {
     version: ServerApiVersion.v1,
