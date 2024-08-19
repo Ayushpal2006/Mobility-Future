@@ -11,9 +11,9 @@ import postRouter from "./routes/postJob.js";
 // Load environment variables
 dotenv.config();
 
-
 const app = express();
 
+let MongoClient = mongodb.MongoClient;
 const client = new MongoClient(process.env.MONGO_URI, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -22,7 +22,7 @@ const client = new MongoClient(process.env.MONGO_URI, {
   },
 });
 
-//Define Collections here
+// Define Collections here
 const db = client.db("test");
 const usersCollection = db.collection("users");
 const postsCollection = db.collection("postjobs");

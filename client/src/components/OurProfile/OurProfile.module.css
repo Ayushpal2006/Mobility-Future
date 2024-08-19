@@ -54,5 +54,53 @@
 
   border-radius: 10px;
 
-  border: solid yellow 1px;
+  border: solid black 1px;
+}
+
+.container ol {
+  list-style-type: none;
+}
+
+.container img {
+  position: static;
+  width: 50px;
+  height: 50px;
+
+  min-width: 0;
+  min-height: 0 !important;
+}
+
+.logoList li {
+  display: inline-block;
+  width: 20%;
+
+  margin-top: 6vh;
+  margin-left: 2vw;
+
+  text-align: center;
+}
+
+.logoList li a {
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.logoList li a:hover {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+#profilePic {
+  display: inline-block;
+  width: 17vw;
+  height: 17vw;
+  max-width: none !important;
+  max-height: none !important;
+
+  margin-left: 4.5vw;
+}
+.aboutCont {
+  font-size: 3vh;
+  text-align: center;
+  padding: 5vh;
 }
