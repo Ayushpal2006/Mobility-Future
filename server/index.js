@@ -11,7 +11,6 @@ import postRouter from "./routes/postJob.js";
 // Load environment variables
 dotenv.config();
 
-
 const app = express();
 
 const client = new MongoClient(process.env.MONGO_URI, {
@@ -44,10 +43,10 @@ app.use(cors());
 app.use("/api/auth", authRouter);
 app.use("/api/postJob", postRouter);
 
-app.get("/api/posts", async (req, res) => {
-  const result = await postsCollection.find({ driver: "NA" }).toArray();
-  res.send(result);
-});
+// app.get("/api/posts", async (req, res) => {
+//   const result = await postsCollection.find({ driver: "NA" }).toArray();
+//   res.send(result);
+// });
 
 // app.post('/assignDriver', (req,res)=>{
 //   const driver_id = req.body.driver_id;
