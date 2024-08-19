@@ -95,7 +95,7 @@ export default function PostPage() {
       </div>
       <div className={styles.popUpDiv} id="popUpDiv">
         <button className={styles.popUpButton} onClick={popUp} id="popUpBut">
-          <h2 className="amsterdam">Create a Job</h2> <img alt="arrow" />
+          <h2 className="amsterdam">Create a Job</h2>
         </button>
         <button
           className={styles.popUpButton}
@@ -103,7 +103,7 @@ export default function PostPage() {
           onClick={popDown}
           id="popDownBut"
         >
-          <h2 className="amsterdam">Collapse</h2> <img alt="arrow" />
+          <h2 className="amsterdam">Collapse</h2>
         </button>
         <JobForm func={popDown} />
       </div>

@@ -2,10 +2,13 @@ import React from "react";
 import styles from "../OurProfile.module.css";
 
 export default function OurProfile(props) {
-  console.log(props);
   return (
     <div className={styles.container}>
-      <h1 className="amsterdam">
+      <div className={styles.imgCont}></div>
+      <div className={styles.nameCont}></div>
+      <div className={styles.logoCont}></div>
+      <div className={styles.aboutCont}></div>
+      {/* <h1 className="amsterdam">
         {props.data ? props.data.name : "loading..."}
       </h1>
       <div>
@@ -42,7 +45,7 @@ export default function OurProfile(props) {
             </h4>
           </a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 .container {
   padding: 3vw;
-  padding-top: 2vw;
-  padding-bottom: 0.75vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 
   margin-left: 5vw;
   margin-top: 5vh;
@@ -19,6 +19,29 @@
   overflow-y: hidden;
 
   z-index: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+
+  gap: 1vw;
+}
+
+.imgCont {
+  grid-row: span 2;
+}
+
+.nameCont {
+  grid-column: span 2;
+}
+
+.logoCont {
+  grid-column: span 2;
+}
+
+.aboutCont {
+  grid-column: span 3;
+  grid-row: span 2;
 }
 
 .container h1 {
@@ -27,11 +50,9 @@
 
 .container > div {
   width: 100%;
-  height: 60vh;
+  height: 100%;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  border-radius: 10px;
 
   border: solid yellow 1px;
 }
