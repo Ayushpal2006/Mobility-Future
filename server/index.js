@@ -1,7 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import bcrypt from "bcrypt";
 import dotenv from "dotenv";
 import { default as mongodb, ObjectId, ServerApiVersion } from "mongodb";
 import cookieParser from "cookie-parser";
@@ -12,7 +11,6 @@ import postRouter from "./routes/postJob.js";
 // Load environment variables
 dotenv.config();
 
-let MongoClient = mongodb.MongoClient;
 
 const app = express();
 
