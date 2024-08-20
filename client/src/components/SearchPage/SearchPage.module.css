@@ -65,13 +65,10 @@
 }
 
 .filterContainer > div > div > select {
-  background-color: #758694;
   width: 100%;
   height: 5vh;
 
   border-radius: 10px;
-
-  border: none;
 }
 
 .cardsContainer {
@@ -124,4 +121,31 @@
 
 .logoCont {
   border: solid green 1px;
+}
+
+.container button {
+  background-color: #b4b4b8;
+  border: solid black 1px;
+
+  border-radius: 10px;
+
+  min-height: 4vh;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.container button:hover {
+  background-color: #758694;
+}
+
+.filterContainer div > select {
+  background-color: #b4b4b8;
+  border: solid black 1px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.container select:hover {
+  background-color: #758694;
+  color: whitesmoke;
 }

@@ -5,24 +5,60 @@ import data from "../filter.json";
 import PostCard from "./components/PostCard";
 import { useEffect } from "react";
 import axios from "axios";
+import $ from "jquery";
 
 export default function SearchPage() {
+  const [filters, setFilters] = useState({
+    fromCity: "Any",
+    fare: "Any",
+    weight: "Any",
+  });
+  const [postsData, setPostsData] = useState({
+    allData: [],
+    showData: [],
+  });
+
   function handleChange(id) {
-    console.log(id);
+    setFilters({
+      ...filters,
+      [id]: $(`select[name='${id}'] option:selected`).val(),
+    });
   }
-  const [postsData, setPostsData] = useState([]);
+
+  useEffect(() => {
+    var arr = postsData.allData;
+    for (const key in filters) {
+      if (filters[key] !== "Any") {
+        if (key === "fare") {
+          const filterVar = +filters[key];
+          arr = arr.filter((obj) => {
+            return +obj.fare > filterVar;
+          });
+        }
+        if (key === "weight") {
+          const filterVar = +filters[key];
+          arr = arr.filter((obj) => {
+            return obj.cargo_weight > filterVar;
+          });
+        }
+      }
+    }
+    setPostsData((state) => ({
+      ...state,
+      showData: arr ? arr : [],
+    }));
+  }, [filters, postsData.allData, setPostsData]);
 
   useEffect(() => {
     const getData = async () => {
       const result = await axios.get(
         `${process.env.REACT_APP_BASE_URL}api/posts`
       );
-      setPostsData(result.data);
+      setPostsData({ showData: result.data, allData: result.data });
     };
     getData();
+    console.log("akjhsdbfa");
   }, []);
-
-  console.log(postsData);
 
   return (
     <div className={styles.container}>
@@ -49,19 +85,13 @@ export default function SearchPage() {
             title="Cargo Weight"
             func={handleChange}
           />
-          <SelectDD
-            name="date"
-            arr={data.date}
-            title="Date"
-            func={handleChange}
-          />
         </div>
       </div>
       <div>
         <h1 className="amsterdam">Search Page</h1>
         <hr />
         <div className={styles.cardsContainer}>
-          {postsData.map((obj) => {
+          {postsData.showData.map((obj) => {
             return <PostCard data={obj} key={obj.id} />;
           })}
         </div>

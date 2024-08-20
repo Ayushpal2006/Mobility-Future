@@ -29,11 +29,11 @@
   ],
   "weight": [
     {
-      "name": ">50 Kg",
+      "name": ">50Kg",
       "value": "50"
     },
     {
-      "name": ">100 Kg",
+      "name": ">100Kg",
       "value": "100"
     },
     {
