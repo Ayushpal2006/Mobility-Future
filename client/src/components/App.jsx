@@ -9,6 +9,7 @@ import ContactUs from "./ContactUs/ContactUs";
 import AboutUs from "./AboutUs/AboutUs";
 import Footer from "./Footer/Footer";
 import Login from "./Login/Login";
+import Application from "./Profile/Application";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/ourProfile/:id" element={<OurProfileRenderer />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Apple" element={<Application />} />
         </Route>
       </Routes>
     </Router>
