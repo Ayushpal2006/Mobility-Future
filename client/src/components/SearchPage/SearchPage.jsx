@@ -68,12 +68,6 @@ export default function SearchPage() {
         <br />
         <div>
           <SelectDD
-            name="fromCity"
-            arr={data.fromCity}
-            title="From City"
-            func={handleChange}
-          />
-          <SelectDD
             name="fare"
             arr={data.fare}
             title="Fare"
