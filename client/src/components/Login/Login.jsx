@@ -58,7 +58,7 @@ export default function Login() {
             <button type="submit">Submit</button>
           </form>
         </div>
-        <div className={styles.oAuthDiv}>
+        <div className={styles.oAuthDiv} id={styles.oAuthDivReg}>
           <h1 className="amsterdam">Use Other Methods</h1>
           <button onClick={showLogin}>Login</button>
           <button onClick={showDetCont}>Move Forward</button>
