@@ -170,3 +170,7 @@
     height: 100vh;
   }
 }
+
+.LatestJobs button {
+  display: none;
+}

@@ -5,6 +5,7 @@ import Carousel from "./components/Carousel";
 import $ from "jquery";
 import OurServices from "./components/OurServices";
 import HowItWorks from "./components/HowItWorks";
+import LatestJobs from "./components/LatestJobs";
 
 export default function Home() {
   useEffect(() => {
@@ -17,8 +18,9 @@ export default function Home() {
   return (
     <>
       <Carousel styleData={styles.carouselContainer} />
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles.LatestJobs}`}>
         <h1 className="amsterdam">Latest Jobs</h1>
+        <LatestJobs />
       </div>
       <div className={styles.container}>
         <h1 className="amsterdam">Our Services</h1>
