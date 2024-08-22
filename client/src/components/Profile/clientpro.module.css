@@ -26,7 +26,7 @@
   display: inline-block;
 }
 
-img {
+.procast img {
   max-width: 5vh;
   max-height: 5vh;
   border-radius: 100%;
@@ -54,7 +54,7 @@ img {
   margin-bottom: 1%;
 }
 
-label {
+.procast label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;

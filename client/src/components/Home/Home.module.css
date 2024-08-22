@@ -1,0 +1,172 @@
+.container {
+  padding: 3vw;
+  padding-top: 2vw;
+
+  margin-left: 5vw;
+  margin-top: 3vh;
+
+  width: 90vw;
+  height: auto;
+  min-height: 80.5vh;
+
+  background-color: #b4b4b8;
+
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 10px whitesmoke, -2px -2px 10px whitesmoke,
+    inset 0.1px 0.1px 10px black, inset -0.1px -0.1px 10px black;
+
+  overflow-y: hidden;
+
+  z-index: 0;
+}
+
+.container > h1 {
+  font-size: 7.5vh;
+  text-align: center;
+}
+
+.carouselContainer {
+  box-shadow: 2px 2px 10px whitesmoke, -2px -2px 10px whitesmoke,
+    inset 0.1px 0.1px 10px black, inset -0.1px -0.1px 10px black;
+
+  height: auto;
+  width: 96vw;
+
+  margin-top: 3vh;
+  margin-left: 1.5vw;
+  margin-bottom: 3vh;
+
+  border-radius: 10px;
+}
+
+.carouselContainer img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+}
+
+.serviceContainer {
+  width: 100%;
+  height: 60.5vh;
+}
+
+.serviceDiv {
+  padding: 2vw;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  gap: 2vw;
+
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .serviceDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .container:has(.service) {
+    height: 160vh;
+  }
+}
+
+.service {
+  width: 100%;
+  height: 30vh;
+
+  margin-top: 10.5vh;
+
+  background-color: #758694;
+
+  color: whitesmoke;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  border-radius: 10px;
+
+  transition: all 0.3s ease-in-out;
+
+  padding: 2vw;
+}
+
+.service h3 {
+  font-size: 4vh;
+  text-align: center;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+.service p {
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+.service:hover {
+  transform: scale(1.1) translateY(-3vh);
+  background-color: #405d72;
+}
+
+.ProcessPage {
+  width: 100%;
+  height: 60.5vh;
+}
+
+.steps {
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 2vw;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  transition: all 0.3s ease-in-out;
+
+  background-color: #758694;
+
+  color: whitesmoke;
+
+  border-radius: 10px;
+}
+
+.step h3 {
+  font-size: 4vh;
+  text-align: center;
+}
+
+.step p {
+  text-align: center;
+  font-size: 2.5vh;
+}
+
+.step:hover {
+  transform: scale(1.01) translateY(-1vh);
+  background-color: #405d72;
+}
+
+@media screen and (max-width: 900px) {
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .container:has(.steps) {
+    height: 100vh;
+  }
+}

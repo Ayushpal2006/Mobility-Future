@@ -50,7 +50,7 @@ export default function Login() {
     return validationErrors;
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
 
@@ -59,19 +59,21 @@ export default function Login() {
     } else {
       setErrors({});
 
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/auth/login`,{
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
+      const response = await fetch(
+        `${process.env.REACT_APP_BASE_URL}/api/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const result = await response.text();
-  
-      console.log(formData)
 
-      console.log(result)
-    
+      console.log(formData);
+
+      console.log(result);
     }
   };
 
@@ -87,12 +89,10 @@ export default function Login() {
     <>
       <div className={styles.container} id="LoginPage">
         <div className={styles.logFormDiv}>
-
-
           <form onSubmit={handleSubmit}>
             <h1 className="amsterdam">Login</h1>
 
-            <div className="input-group">
+            {/* <div className="input-group">
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -102,9 +102,11 @@ export default function Login() {
                 onChange={handleChange}
               />
               {errors.email && <p className="error">{errors.email}</p>}
-            </div>
+            </div> */}
 
-            <div className="input-group">
+            <InputField title="Email" name="email" type="email" />
+
+            {/* <div className="input-group">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -114,15 +116,16 @@ export default function Login() {
                 onChange={handleChange}
               />
               {errors.password && <p className="error">{errors.password}</p>}
-            </div>
+            </div> */}
+            <InputField title="Password" name="password" type="password" />
 
             <button type="submit">Submit</button>
           </form>
-
-
         </div>
-        <div className={styles.oAuthDiv}>
-          <h1 className="amsterdam">Use Other Methods</h1>
+        <div className={styles.oAuthDiv} id={styles.oAuthDivLog}>
+          <h1 className="amsterdam" style={{ color: "black" }}>
+            Use Other Methods
+          </h1>
           <button onClick={showRegister}>Register</button>
           <button onClick={showDetCont}>Move Forward</button>
         </div>
@@ -138,7 +141,7 @@ export default function Login() {
             <InputField name="email" title="Email" type="email" />
             <InputField name="name" title="Name" />
             <InputField name="password" title="Password" type="password" />
-            <button type="submit">Submit</button>
+            <button type="submit">Next</button>
           </form>
         </div>
         <div className={styles.oAuthDiv} id={styles.oAuthDivReg}>
