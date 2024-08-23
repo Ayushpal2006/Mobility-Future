@@ -139,7 +139,7 @@ export default function Login() {
           <form>
             <h1 className="amsterdam">Register</h1>
             <InputField name="email" title="Email" type="email" />
-            <InputField name="name" title="Name" />
+            <InputField name="role" title="Role" />
             <InputField name="password" title="Password" type="password" />
             <button type="submit">Next</button>
           </form>
