@@ -12,6 +12,8 @@ export default function InputField(props) {
         aria-label="Sizing example input"
         aria-describedby="inputGroup-sizing-default"
         name={props.name}
+        value={props.value}
+        onChange={props.onChange}
         required
       />
     </div>
