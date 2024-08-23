@@ -10,6 +10,10 @@
   border-radius: 2rem 2rem 0px 0px;
 }
 
+.container div:first-child {
+  border-left: solid whitesmoke 1px;
+}
+
 .container div {
   border-right: solid whitesmoke 1px;
   padding: 1% 2%;
