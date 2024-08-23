@@ -17,14 +17,18 @@ export default function Footer() {
             </Link>
           </li>
           <li>
-            <button>
-              <h5>Terms Of Services</h5>
-            </button>
+            <Link to="/tos">
+              <button>
+                <h5>Terms Of Services</h5>
+              </button>
+            </Link>
           </li>
           <li>
-            <button>
-              <h5>Privacy</h5>
-            </button>
+            <Link to="/privacy">
+              <button>
+                <h5>Privacy</h5>
+              </button>
+            </Link>
           </li>
         </ul>
       </div>
@@ -107,9 +111,11 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <button>
-              <h5>Stack / Dependencies</h5>
-            </button>
+            <Link to="/stack">
+              <button>
+                <h5>Stack / Dependencies</h5>
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

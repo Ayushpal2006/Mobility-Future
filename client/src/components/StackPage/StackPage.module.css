@@ -1,0 +1,71 @@
+.container {
+  padding: 3vw;
+  padding-top: 2vw;
+
+  margin-left: 5vw;
+  margin-top: 3vh;
+
+  width: 90vw;
+  height: 80.5vh;
+
+  background-color: #b4b4b8;
+
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 10px whitesmoke, -2px -2px 10px whitesmoke,
+    inset 0.1px 0.1px 10px black, inset -0.1px -0.1px 10px black;
+
+  overflow-y: hidden;
+
+  z-index: 0;
+}
+
+.container > h1 {
+  font-size: 7.5vh;
+}
+
+.container > div {
+  width: 100%;
+  height: 55vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  justify-items: center;
+}
+
+.container > div > div {
+  height: 55vh;
+}
+
+.container > div > div > h1 {
+  text-align: center;
+}
+
+.container ul {
+  margin-top: 7vh;
+
+  width: 40vw;
+  height: 48vh;
+
+  text-align: center;
+
+  list-style-type: none;
+}
+
+.container ul li {
+  font-size: 2.5vh;
+}
+
+.container div > h1 {
+  margin-left: 1.5vw;
+}
+
+.stackDiv {
+  border-right: 1px solid black;
+}
+
+.container hr {
+  color: black;
+}

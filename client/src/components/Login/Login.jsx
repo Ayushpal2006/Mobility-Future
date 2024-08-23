@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Login.module.css";
 import InputField from "../GeneralComponents/InputField";
 import $ from "jquery";
@@ -19,13 +19,6 @@ export default function Login() {
     $(`#RegisterPage`).hide();
     $(`#LoginPage`).hide();
   }
-
-  useEffect(() => {
-    $("nav").hide();
-    return () => {
-      $("nav").show();
-    };
-  }, []);
 
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});

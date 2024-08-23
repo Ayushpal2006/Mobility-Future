@@ -17,9 +17,13 @@ export default function LatestJobs() {
 
   return (
     <div>
-      {postsData.slice(0, 3).map((obj) => {
-        return <PostCard data={obj} />;
-      })}
+      {postsData ? (
+        postsData.slice(0, 3).map((obj) => {
+          return <PostCard data={obj} />;
+        })
+      ) : (
+        <h1>"Loading"</h1>
+      )}
     </div>
   );
 }
