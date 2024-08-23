@@ -20,54 +20,26 @@ export default function Login() {
     $(`#LoginPage`).hide();
   }
 
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const [errors, setErrors] = useState({});
+  const [loginformData, setFormData] = useState({ email: "", password: "" });
 
-  const emailPattern = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/i;
-
-  const validateForm = () => {
-    let validationErrors = {};
-
-    // Email validation
-    if (!formData.email) {
-      validationErrors.email = "Email is required";
-    } else if (!emailPattern.test(formData.email)) {
-      validationErrors.email = "Invalid email address";
-    }
-
-    // Password validation
-    if (!formData.password) {
-      validationErrors.password = "Password is required";
-    }
-
-    return validationErrors;
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmitLogin = async (e) => {
     e.preventDefault();
-    const validationErrors = validateForm();
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-    } else {
-      setErrors({});
+    const response = await fetch(
+      `${process.env.REACT_APP_BASE_URL}/api/auth/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginformData),
+      }
+    );
+    const result = await response.text();
+    console.log(result);
 
-      const response = await fetch(
-        `${process.env.REACT_APP_BASE_URL}/api/auth/login`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-      const result = await response.text();
+    console.log(loginformData)
 
-      console.log(formData);
-
-      console.log(result);
-    }
   };
 
   const handleChange = (e) => {
@@ -82,35 +54,27 @@ export default function Login() {
     <>
       <div className={styles.container} id="LoginPage">
         <div className={styles.logFormDiv}>
-          <form onSubmit={handleSubmit}>
+
+
+          <form onSubmit={handleSubmitLogin}>
             <h1 className="amsterdam">Login</h1>
 
-            {/* <div className="input-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              {errors.email && <p className="error">{errors.email}</p>}
-            </div> */}
 
-            <InputField title="Email" name="email" type="email" />
+            <InputField
+              title="Email"
+              name="email"
+              type="email"
+              value={loginformData.email}
+              onChange={handleChange}
+            />
 
-            {/* <div className="input-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-              />
-              {errors.password && <p className="error">{errors.password}</p>}
-            </div> */}
-            <InputField title="Password" name="password" type="password" />
+            <InputField
+              title="Password"
+              name="password"
+              type="password"
+              value={loginformData.password}
+              onChange={handleChange}
+            />
 
             <button type="submit">Submit</button>
           </form>
@@ -162,6 +126,7 @@ export default function Login() {
               placeholder="Leave a comment here"
               id="floatingTextarea2"
               style={{}}
+              
             ></textarea>
             <label for="floatingTextarea2">Address part - 1</label>
           </div>
