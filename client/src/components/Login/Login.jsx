@@ -45,7 +45,7 @@ export default function Login() {
     const result = await response.text();
     console.log(result);
 
-    console.log(loginformData);
+    console.log(loginformData)
 
   };
 
