@@ -4,8 +4,16 @@ import { generateToken } from "../utils/generateToken.js";
 
 export const register = async (req, res, next) => {
   try {
-    const { name, email, password, role, model, company, Address, Address_2 } =
-      req.body;
+    const {
+      name,
+      email,
+      password,
+      role,
+      model,
+      company,
+      Address,
+      Address_two,
+    } = req.body;
 
     const alreadyUser = await userModel.findOne({ email });
     if (alreadyUser) {
@@ -26,7 +34,8 @@ export const register = async (req, res, next) => {
       role,
       model,
       company,
-      Address
+      Address,
+      Address_two,
     });
 
     const token = generateToken(user);

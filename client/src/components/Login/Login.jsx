@@ -29,8 +29,10 @@ export default function Login() {
     model: "",
     company: "",
     Address: "",
-    Address_2: "",
+    Address_two: "",
   });
+
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,6 +53,7 @@ export default function Login() {
     console.log(loginformData);
   };
 
+
   const handleRegister = async (e) => {
     e.preventDefault();
 
@@ -61,7 +64,7 @@ export default function Login() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(loginformData),
+        body: JSON.stringify(registerData),
       }
     );
     const result = await response.text();
@@ -201,12 +204,12 @@ export default function Login() {
           </div>
           <div class="form-floating">
             <textarea
-              name="Address_2"
+              name="Address_two"
               class="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
               style={{}}
-              value={registerData.Address_2}
+              value={registerData.Address_two}
               onChange={handleChangeRegister}
             ></textarea>
             <label for="floatingTextarea2">Address part - 2</label>
