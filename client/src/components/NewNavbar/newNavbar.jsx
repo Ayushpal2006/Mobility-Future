@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./NewNavbar.module.css";
 import $ from "jquery";
 import { Link } from "react-router-dom";
 import logo from "../../images/TH.png";
 
-export default function newNavbar() {
+export default function NewNavbar() {
   function handleUl() {
     $(`.${styles.nav} ul`).toggle();
   }
@@ -14,6 +14,12 @@ export default function newNavbar() {
       $(`.${styles.nav} ul`).show();
     }
   });
+
+  useEffect(() => {
+    if ($(window).width() <= 990) {
+      $(`.${styles.nav} ul`).hide();
+    }
+  }, []);
 
   return (
     <nav className={styles.nav}>

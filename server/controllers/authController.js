@@ -1,17 +1,18 @@
-import bcrypt from 'bcrypt';
-import userModel from '../models/userModel.js';
-import { generateToken } from '../utils/generateToken.js';
-
+import bcrypt from "bcrypt";
+import userModel from "../models/userModel.js";
+import { generateToken } from "../utils/generateToken.js";
 
 export const register = async (req, res, next) => {
   try {
-    const { name, email, password, role, phoneNumber, profilePicture} = req.body;
+    const { name, email, password, role, model, company, Address, Address_2 } =
+      req.body;
 
     const alreadyUser = await userModel.findOne({ email });
     if (alreadyUser) {
       return res.status(400).json({
         success: false,
-        message: "You have already registered with this email. Try another one.",
+        message:
+          "You have already registered with this email. Try another one.",
       });
     }
 
@@ -23,12 +24,13 @@ export const register = async (req, res, next) => {
       email,
       password: hash,
       role,
-      phoneNumber,
-      profilePicture,
+      model,
+      company,
+      Address
     });
 
     const token = generateToken(user);
-    res.cookie('token', token, { httpOnly: true });
+    res.cookie("token", token, { httpOnly: true });
     res.json({
       success: true,
       message: "User created successfully",
@@ -61,7 +63,7 @@ export const login = async (req, res, next) => {
 
     if (result) {
       const token = generateToken(user);
-      res.cookie('token', token, { httpOnly: true });
+      res.cookie("token", token, { httpOnly: true });
       res.json({
         success: true,
         message: "Login successful",
@@ -81,6 +83,6 @@ export const logout = (req, res) => {
     httpOnly: true,
     secure: true,
   };
-  res.clearCookie('token', options);
+  res.clearCookie("token", options);
   res.json({ success: true, message: "Logged out successfully" });
 };

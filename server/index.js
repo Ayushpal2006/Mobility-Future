@@ -49,12 +49,7 @@ app.get("/api/posts", async (req, res) => {
   res.send(result);
 });
 
-// app.post('/assignDriver', (req,res)=>{
-//   const driver_id = req.body.driver_id;
-//   const
 
-//   res.sendStatus(200);
-// });
 // Starting the server
 const PORT = process.env.PORT || 4000;
 

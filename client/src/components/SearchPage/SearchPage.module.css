@@ -95,6 +95,8 @@
   border-radius: 10px;
 
   position: relative;
+
+  max-height: 20vh;
 }
 
 .postCardContainer button {
