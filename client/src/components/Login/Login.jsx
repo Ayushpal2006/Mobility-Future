@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import React, { useState } from "react";
 import styles from "./Login.module.css";
 import InputField from "../GeneralComponents/InputField";
 import $ from "jquery";
@@ -30,8 +29,10 @@ export default function Login() {
     model: "",
     company: "",
     Address: "",
-    Address_2: "",
+    Address_two: "",
   });
+
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,6 +53,7 @@ export default function Login() {
     console.log(loginformData);
   };
 
+
   const handleRegister = async (e) => {
     e.preventDefault();
 
@@ -62,7 +64,7 @@ export default function Login() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(loginformData),
+        body: JSON.stringify(registerData),
       }
     );
     const result = await response.text();
@@ -127,29 +129,31 @@ export default function Login() {
         style={{ display: "none" }}
       >
         <div className={styles.RegFormDiv}>
-            <form >
-              <h1 className="amsterdam">Register</h1>
-              <InputField 
-                name="email"
-                title="Email"
-                type="email"
-                value={registerData.email}
-                onChange={handleChangeRegister}
-              />
-              <InputField
-                name="role"
-                title="Role"
-                value={registerData.role}
-                onChange={handleChangeRegister}
-              />
-              <InputField
-                name="password"
-                title="Password"
-                type="password"
-                value={registerData.password}
-                onChange={handleChangeRegister}
-              />
-              <button type="button" onClick={showDetCont} >Next</button>
+          <form>
+            <h1 className="amsterdam">Register</h1>
+            <InputField
+              name="email"
+              title="Email"
+              type="email"
+              value={registerData.email}
+              onChange={handleChangeRegister}
+            />
+            <InputField
+              name="role"
+              title="Role"
+              value={registerData.role}
+              onChange={handleChangeRegister}
+            />
+            <InputField
+              name="password"
+              title="Password"
+              type="password"
+              value={registerData.password}
+              onChange={handleChangeRegister}
+            />
+            <button type="button" onClick={showDetCont}>
+              Next
+            </button>
           </form>
         </div>
         <div className={styles.oAuthDiv} id={styles.oAuthDivReg}>
@@ -200,12 +204,12 @@ export default function Login() {
           </div>
           <div class="form-floating">
             <textarea
-              name="Address_2"
+              name="Address_two"
               class="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
               style={{}}
-              value={registerData.Address_2}
+              value={registerData.Address_two}
               onChange={handleChangeRegister}
             ></textarea>
             <label for="floatingTextarea2">Address part - 2</label>
