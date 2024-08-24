@@ -117,31 +117,63 @@ label {
 
 .connection {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 5vw;
+  flex-direction: column;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: 2px solid black;
+  border-radius: 2%;
+  padding:2%;
+  justify-content:space-around;
+
+  margin-bottom: 1%;
 }
 
 .connection h2 {
   color: #333;
+  margin-bottom: 2%;
+}
+.connection h3 {
+  color: #333;
+  margin-bottom: 2%;
 }
 
 .location {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 5vw;
+  flex-direction: column;
+  justify-content: space-around;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: 2px solid black;
+  border-radius: 2%;
+  padding:2%;
+  margin-bottom: 1%;
 }
 
 .location h3 {
   color: #666;
+  margin-bottom: 2%;
+}
+.location h2 {
+  color: #666;
+  margin-bottom: 2%;
 }
 
 .money {
   color: #007bff;
 }
 
-.money p {
-  margin: 1%;
+.money span p {
+border:4px solid #333 ;
+border-radius:8px;
+font-style: italic;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+  width:fit-content;
+  padding: 1%
 }
+
+
+
 
 @media (min-width: 600px) {
   .item {
@@ -192,4 +224,10 @@ label {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+}
+
+#box1{
+  border: 2px solid blueviolet;
+  border-radius:4px;
+
 }
