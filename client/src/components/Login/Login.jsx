@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import React, { useState } from "react";
 import styles from "./Login.module.css";
 import InputField from "../GeneralComponents/InputField";
 import $ from "jquery";
@@ -37,7 +36,7 @@ export default function Login() {
     e.preventDefault();
 
     const response = await fetch(
-      `${process.env.REACT_APP_BASE_URL}/api/auth/login`,
+      `${process.env.REACT_APP_BASE_URL}api/auth/login`,
       {
         method: "POST",
         headers: {
@@ -56,7 +55,7 @@ export default function Login() {
     e.preventDefault();
 
     const response = await fetch(
-      `${process.env.REACT_APP_BASE_URL}/api/auth/register`,
+      `${process.env.REACT_APP_BASE_URL}api/auth/register`,
       {
         method: "POST",
         headers: {
@@ -127,29 +126,31 @@ export default function Login() {
         style={{ display: "none" }}
       >
         <div className={styles.RegFormDiv}>
-            <form >
-              <h1 className="amsterdam">Register</h1>
-              <InputField 
-                name="email"
-                title="Email"
-                type="email"
-                value={registerData.email}
-                onChange={handleChangeRegister}
-              />
-              <InputField
-                name="role"
-                title="Role"
-                value={registerData.role}
-                onChange={handleChangeRegister}
-              />
-              <InputField
-                name="password"
-                title="Password"
-                type="password"
-                value={registerData.password}
-                onChange={handleChangeRegister}
-              />
-              <button type="button" onClick={showDetCont} >Next</button>
+          <form>
+            <h1 className="amsterdam">Register</h1>
+            <InputField
+              name="email"
+              title="Email"
+              type="email"
+              value={registerData.email}
+              onChange={handleChangeRegister}
+            />
+            <InputField
+              name="role"
+              title="Role"
+              value={registerData.role}
+              onChange={handleChangeRegister}
+            />
+            <InputField
+              name="password"
+              title="Password"
+              type="password"
+              value={registerData.password}
+              onChange={handleChangeRegister}
+            />
+            <button type="button" onClick={showDetCont}>
+              Next
+            </button>
           </form>
         </div>
         <div className={styles.oAuthDiv} id={styles.oAuthDivReg}>
