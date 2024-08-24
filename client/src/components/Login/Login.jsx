@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Login.module.css";
 import InputField from "../GeneralComponents/InputField";
 import $ from "jquery";
@@ -20,16 +20,19 @@ export default function Login() {
     $(`#LoginPage`).hide();
   }
 
-  useEffect(() => {
-    $("nav").hide();
-    return () => {
-      $("nav").show();
-    };
-  }, []);
-
   const [loginformData, setFormData] = useState({ email: "", password: "" });
+  const [registerData, setRegisterData] = useState({
+    email: "",
+    password: "",
+    role: "",
+    name: "",
+    model: "",
+    company: "",
+    Address: "",
+    Address_2: "",
+  });
 
-  const handleSubmitLogin = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const response = await fetch(
@@ -45,8 +48,26 @@ export default function Login() {
     const result = await response.text();
     console.log(result);
 
-    console.log(loginformData)
+    console.log(loginformData);
+  };
 
+  const handleRegister = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch(
+      `${process.env.REACT_APP_BASE_URL}/api/auth/register`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(loginformData),
+      }
+    );
+    const result = await response.text();
+    console.log(result);
+
+    console.log(registerData);
   };
 
   const handleChange = (e) => {
@@ -57,15 +78,20 @@ export default function Login() {
     }));
   };
 
+  const handleChangeRegister = (e) => {
+    const { name, value } = e.target;
+    setRegisterData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   return (
     <>
       <div className={styles.container} id="LoginPage">
         <div className={styles.logFormDiv}>
-
-
-          <form onSubmit={handleSubmitLogin}>
+          <form onSubmit={handleSubmit}>
             <h1 className="amsterdam">Login</h1>
-
 
             <InputField
               title="Email"
@@ -100,12 +126,29 @@ export default function Login() {
         style={{ display: "none" }}
       >
         <div className={styles.RegFormDiv}>
-          <form>
-            <h1 className="amsterdam">Register</h1>
-            <InputField name="email" title="Email" type="email" />
-            <InputField name="name" title="Name" />
-            <InputField name="password" title="Password" type="password" />
-            <button type="submit">Next</button>
+            <form >
+              <h1 className="amsterdam">Register</h1>
+              <InputField 
+                name="email"
+                title="Email"
+                type="email"
+                value={registerData.email}
+                onChange={handleChangeRegister}
+              />
+              <InputField
+                name="role"
+                title="Role"
+                value={registerData.role}
+                onChange={handleChangeRegister}
+              />
+              <InputField
+                name="password"
+                title="Password"
+                type="password"
+                value={registerData.password}
+                onChange={handleChangeRegister}
+              />
+              <button type="button" onClick={showDetCont} >Next</button>
           </form>
         </div>
         <div className={styles.oAuthDiv} id={styles.oAuthDivReg}>
@@ -119,34 +162,54 @@ export default function Login() {
         id="takeDetailsPage"
         style={{ display: "none" }}
       >
-        <form>
+        <form onSubmit={handleRegister}>
           <h1 className="amsterdam">Add More Details</h1>
-          <InputField name="name" title="Name" />
+          <InputField
+            name="name"
+            title="Name"
+            value={registerData.name}
+            onChange={handleChangeRegister}
+          />
           {$("input[name='role']") === "Driver" ? (
-            <InputField name="model" title="Car Model" />
+            <InputField
+              name="model"
+              title="Car Model"
+              value={registerData.model}
+              onChange={handleChangeRegister}
+            />
           ) : (
-            <InputField name="company" title="Company/Personal" />
+            <InputField
+              name="company"
+              title="Company/Personal"
+              value={registerData.company}
+              onChange={handleChangeRegister}
+            />
           )}
           <div class="form-floating">
             <textarea
+              name="Address"
               class="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
               style={{}}
-              
+              value={registerData.Address}
+              onChange={handleChangeRegister}
             ></textarea>
             <label for="floatingTextarea2">Address part - 1</label>
           </div>
           <div class="form-floating">
             <textarea
+              name="Address_2"
               class="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
               style={{}}
+              value={registerData.Address_2}
+              onChange={handleChangeRegister}
             ></textarea>
             <label for="floatingTextarea2">Address part - 2</label>
           </div>
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </>

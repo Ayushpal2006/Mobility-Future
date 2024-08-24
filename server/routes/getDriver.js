@@ -6,7 +6,7 @@ router.get('/:userId', async (req, res) => {
   const { userId } = req.params;
 
   try {
-    const driver = await userModel.findOne({ _id: userId, role: 'trucker' });
+    const driver = await userModel.findOne({ _id: userId, role: 'Driver' });
 
     if (!driver) {
       return res.status(404).json({
