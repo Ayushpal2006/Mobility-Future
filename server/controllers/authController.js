@@ -26,7 +26,8 @@ export const register = async (req, res, next) => {
       role,
       model,
       company,
-      Address
+      Address,
+      Address_2
     });
 
     const token = generateToken(user);
