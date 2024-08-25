@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import InputField from "../GeneralComponents/InputField";
 import $ from "jquery";
@@ -20,6 +21,8 @@ export default function Login() {
     $(`#LoginPage`).hide();
   }
 
+  const navigate = useNavigate();
+
   const [loginformData, setFormData] = useState({ email: "", password: "" });
   const [registerData, setRegisterData] = useState({
     email: "",
@@ -31,8 +34,6 @@ export default function Login() {
     Address: "",
     Address_two: "",
   });
-
- 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,12 +48,13 @@ export default function Login() {
         body: JSON.stringify(loginformData),
       }
     );
-    const result = await response.text();
-    console.log(result);
-
-    console.log(loginformData);
+    const result = JSON.parse(await response.text());
+    if (result.user) {
+      navigate("/home");
+    } else {
+      alert(result.message);
+    }
   };
-
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -67,10 +69,12 @@ export default function Login() {
         body: JSON.stringify(registerData),
       }
     );
-    const result = await response.text();
-    console.log(result);
-
-    console.log(registerData);
+    const result = JSON.parse(await response.text());
+    if (result.user) {
+      navigate("/");
+    } else {
+      alert(result.message);
+    }
   };
 
   const handleChange = (e) => {
