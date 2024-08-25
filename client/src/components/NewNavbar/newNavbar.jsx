@@ -23,7 +23,7 @@ export default function NewNavbar() {
 
   return (
     <nav className={styles.nav}>
-      <ul id>
+      <ul >
         <li id={styles.logoCont}>
           <img
             alt="logo"

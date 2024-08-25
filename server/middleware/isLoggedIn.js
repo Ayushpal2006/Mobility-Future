@@ -1,7 +1,8 @@
 import userModel from '../models/userModel.js';
 import jwt from 'jsonwebtoken';
 
-export async function isLoggedIn(req, res, next) {
+export default async function isLoggedIn(req, res, next) {
+  console.log('Cookies:', req.cookies);
   if (!req.cookies.token) {
     console.log('error', 'Please log in to view this page');
     return res.json({

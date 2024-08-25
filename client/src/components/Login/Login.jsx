@@ -194,29 +194,29 @@ export default function Login() {
               onChange={handleChangeRegister}
             />
           )}
-          <div class="form-floating">
+          <div className="form-floating">
             <textarea
               name="Address"
-              class="form-control"
+              className="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
               style={{}}
               value={registerData.Address}
               onChange={handleChangeRegister}
             ></textarea>
-            <label for="floatingTextarea2">Address part - 1</label>
+            <label htmlFor="floatingTextarea2">Address part - 1</label>
           </div>
-          <div class="form-floating">
+          <div className="form-floating">
             <textarea
               name="Address_two"
-              class="form-control"
+              className="form-control"
               placeholder="Leave a comment here"
               id="floatingTextarea2"
               style={{}}
               value={registerData.Address_two}
               onChange={handleChangeRegister}
             ></textarea>
-            <label for="floatingTextarea2">Address part - 2</label>
+            <label htmlFor="floatingTextarea2">Address part - 2</label>
           </div>
           <button type="submit">Submit</button>
         </form>
