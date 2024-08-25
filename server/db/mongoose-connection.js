@@ -10,7 +10,7 @@ const connectDB = async () => {
         useUnifiedTopology: true,
       }
     );
-
+    
     console.log("MONGO_URI:", MONGO_URI); // Debug log
     console.log(
       `\n MongoDB connected! DB HOST: ${connectionInstance.connection.host}`
