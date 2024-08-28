@@ -12,6 +12,11 @@ import postRouter from "./routes/postJob.js";
 dotenv.config();
 
 const app = express();
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 
 let MongoClient = mongodb.MongoClient;
 const client = new MongoClient(process.env.MONGO_URI, {
@@ -38,12 +43,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(
-  cors({
-    origin: 'http://localhost:3000', 
-    credentials: true,               
-  })
-);
+app.use(cors());
 
 // app.use(cors());
 
@@ -55,7 +55,6 @@ app.get("/api/posts", async (req, res) => {
   const result = await postsCollection.find({ driver: "NA" }).toArray();
   res.send(result);
 });
-
 
 // Starting the server
 const PORT = process.env.PORT || 4000;

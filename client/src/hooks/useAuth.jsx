@@ -8,7 +8,7 @@ function useAuth() {
     async function checkAuth() {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_BASE_URL}/api/auth/protected`,
+          `${process.env.REACT_APP_BASE_URL}api/auth/protected`,
           {
             method: "GET",
             credentials: "include",
