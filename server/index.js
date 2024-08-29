@@ -13,10 +13,9 @@ dotenv.config();
 
 const app = express();
 const corsOptions = {
-  origin: "*",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
+    origin: process.env.BASE_URL, 
+    credentials: true,               
+  };
 
 let MongoClient = mongodb.MongoClient;
 const client = new MongoClient(process.env.MONGO_URI, {
