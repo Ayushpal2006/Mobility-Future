@@ -13,9 +13,12 @@ dotenv.config();
 
 const app = express();
 const corsOptions = {
-    origin: process.env.BASE_URL, 
-    credentials: true,               
-  };
+  origin: [
+    "https://mobility-future-server.onrender.com",
+    "http://localhost:3000",
+  ],
+  credentials: true,
+};
 
 let MongoClient = mongodb.MongoClient;
 const client = new MongoClient(process.env.MONGO_URI, {

@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,8 +25,7 @@ function App() {
 
   const { isAuthenticated, loading } = useAuth();
 
-  // console.log(isAuthenticated); 
-
+  // console.log(isAuthenticated);
 
   //inline Css
   const loadingStyle = {
@@ -43,25 +42,24 @@ function App() {
   };
 
   const flashMessageStyle = {
-    position: 'fixed',
-    top: '10px',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-    color: 'white',
-    padding: '10px 20px',
-    borderRadius: '5px',
+    position: "fixed",
+    top: "10px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    color: "white",
+    padding: "10px 20px",
+    borderRadius: "5px",
     zIndex: 9999,
-    fontSize: '1rem',
-    textAlign: 'center',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+    fontSize: "1rem",
+    textAlign: "center",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
   };
 
-  
   if (loading) {
     return (
       <div style={loadingStyle} className="loading">
-        Loading...
+        Activating Backend Server..
       </div>
     );
   }
@@ -73,12 +71,14 @@ function App() {
     }, 3000);
   };
 
-  
-
   return (
     <Router>
       <div>
-        {flashMessage && <div style={flashMessageStyle} className="flash-message">{flashMessage}</div>}
+        {flashMessage && (
+          <div style={flashMessageStyle} className="flash-message">
+            {flashMessage}
+          </div>
+        )}
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/" element={<Layout />}>
