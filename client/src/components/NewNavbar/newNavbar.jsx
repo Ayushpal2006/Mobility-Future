@@ -23,7 +23,7 @@ export default function NewNavbar() {
 
   return (
     <nav className={styles.nav}>
-      <ul >
+      <ul>
         <li id={styles.logoCont}>
           <img
             alt="logo"
@@ -57,7 +57,9 @@ export default function NewNavbar() {
           </Link>
         </li>
         <div>
-          <button id={styles.logBut}>Login</button>
+          <Link to="/Account">
+            <button id={styles.logBut}>Profile</button>
+          </Link>
         </div>
       </ul>
       <button style={{ display: "none" }} id={styles.DD} onClick={handleUl}>

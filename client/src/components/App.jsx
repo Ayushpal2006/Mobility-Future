@@ -13,7 +13,6 @@ import OurProfileRenderer from "./OurProfile/OurProfileRenderer";
 import ContactUs from "./ContactUs/ContactUs";
 import AboutUs from "./AboutUs/AboutUs";
 import Login from "./Login/Login";
-import Application from "./Profile/Application";
 import Home from "./Home/Home";
 import TOSPage from "./TOSPage/TOSPage";
 import PrivacyPage from "./Privacy/PrivacyPage";
@@ -137,7 +136,6 @@ function App() {
             />
             <Route path="/contactUs" element={<ContactUs />} />
             <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/Apple" element={<Application />} />
             <Route path="/tos" element={<TOSPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/stack" element={<StackPage />} />
