@@ -48,7 +48,8 @@ export default function Login() {
         body: JSON.stringify(loginformData),
       }
     );
-    const result = JSON.parse(await response.text());
+    const result = await response.json();
+    console.log(result)
     if (result.user) {
       navigate("/home");
     } else {
@@ -69,13 +70,15 @@ export default function Login() {
         body: JSON.stringify(registerData),
       }
     );
-    const result = JSON.parse(await response.text());
+    const result = await response.json();
+    console.log(result)
     if (result.user) {
       navigate("/");
     } else {
       alert(result.message);
     }
   };
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;

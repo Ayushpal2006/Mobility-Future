@@ -38,12 +38,12 @@ export const register = async (req, res, next) => {
       Address_two,
     });
 
-    const token = generateToken(user);
-    res.cookie("token", token, { httpOnly: true });
+    // const token = generateToken(user);
+    // res.cookie("token", token, { httpOnly: true });
     res.json({
       success: true,
       message: "User created successfully",
-      user,
+      user : user,
     });
   } catch (error) {
     console.error(error);
@@ -71,8 +71,8 @@ export const login = async (req, res, next) => {
     }
 
     if (result) {
-      const token = generateToken(user);
-      res.cookie("token", token, { httpOnly: true });
+      // const token = generateToken(user);
+      // res.cookie("token", token, { httpOnly: true });
       res.json({
         success: true,
         message: "Login successful",
