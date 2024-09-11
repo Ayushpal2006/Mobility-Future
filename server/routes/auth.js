@@ -7,10 +7,10 @@ const router = express.Router();
 router.post("/register", register);
 router.post("/login", login);
 router.post("/logout", logout);
-router.get("/protected", isLoggedIn, (req, res) => {
+// router.get("/protected", isLoggedIn, (req, res) => {
 
-  res.json({ success: true, message: "You have access to this route!" });
-});
+//   res.json({ success: true, message: "You have access to this route!" });
+// });
 
 router.get('/set', (req, res) => {
   const token = 'yourGeneratedTokenHere';
