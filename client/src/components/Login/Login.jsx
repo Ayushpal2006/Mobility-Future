@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import InputField from "../GeneralComponents/InputField";
 import $ from "jquery";
+import Cookies from "js-cookie";
 
 export default function Login() {
   function showRegister() {
@@ -49,8 +50,8 @@ export default function Login() {
       }
     );
     const result = await response.json();
-    console.log(result)
-    if (result.user) {
+    if (result.success) {
+      Cookies.set("id", result.user._id);
       navigate("/home");
     } else {
       alert(result.message);
@@ -71,14 +72,13 @@ export default function Login() {
       }
     );
     const result = await response.json();
-    console.log(result)
+    console.log(result);
     if (result.user) {
       navigate("/");
     } else {
       alert(result.message);
     }
   };
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;

@@ -3,14 +3,19 @@ import styles from "./clientpro.module.css";
 import PostCard from "../SearchPage/components/PostCard";
 import axios from "axios";
 import $ from "jquery";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const profileimg =
   "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png";
 
 function Profile() {
   const [postsData, setPostsData] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
+    if (!Cookies.get("id")) {
+      navigate("/");
+    }
     const getData = async () => {
       const result = await axios.get(
         `${process.env.REACT_APP_BASE_URL}api/posts`

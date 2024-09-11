@@ -6,6 +6,8 @@ import PostCard from "./components/PostCard";
 import { useEffect } from "react";
 import axios from "axios";
 import $ from "jquery";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 export default function SearchPage() {
   const [filters, setFilters] = useState({
@@ -49,7 +51,12 @@ export default function SearchPage() {
     }));
   }, [filters, postsData.allData, setPostsData]);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
+    if (!Cookies.get("id")) {
+      navigate("/");
+    }
     const getData = async () => {
       const result = await axios.get(
         `${process.env.REACT_APP_BASE_URL}api/posts`
@@ -57,7 +64,6 @@ export default function SearchPage() {
       setPostsData({ showData: result.data, allData: result.data });
     };
     getData();
-    console.log("akjhsdbfa");
   }, []);
 
   return (

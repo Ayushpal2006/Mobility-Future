@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./PostPage.module.css";
 import $ from "jquery";
 import JobForm from "./JobForm/JobForm";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 export default function PostPage() {
   function popUp() {
@@ -17,6 +19,13 @@ export default function PostPage() {
     $("#popDownBut").hide();
     $("#popUpBut").show();
   }
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!Cookies.get("id")) {
+      navigate("/");
+    }
+  });
 
   return (
     <div className={styles.wholePage}>
