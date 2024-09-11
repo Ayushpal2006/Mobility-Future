@@ -16,6 +16,7 @@ const corsOptions = {
   origin: [
     "https://mobility-future-server.onrender.com",
     "http://localhost:3000",
+    "https://transpohub.vercel.app",
   ],
   credentials: true,
 };
