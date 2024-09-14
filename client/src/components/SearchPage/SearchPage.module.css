@@ -151,3 +151,9 @@
   background-color: #758694;
   color: whitesmoke;
 }
+
+@media (max-width: 990px) {
+  .container button {
+    min-width: 17.5vw;
+  }
+}

@@ -62,7 +62,7 @@
 }
 
 .formDiv button {
-  margin-left: 35vw;
+  margin-left: 25vw;
   margin-top: 5vh;
   max-width: 10vw;
   min-width: auto;
@@ -74,4 +74,20 @@
 .formDiv input,
 .formDiv span {
   height: 5vh;
+}
+
+.formDiv button {
+  border: solid black 1px;
+  background-color: #b4b4b8;
+  border-radius: 10px;
+
+  min-width: 30vw;
+  max-height: 5vh;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.formDiv button:hover {
+  background-color: whitesmoke;
+  color: black;
 }

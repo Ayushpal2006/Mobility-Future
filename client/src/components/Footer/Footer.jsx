@@ -113,7 +113,7 @@ export default function Footer() {
           <li>
             <Link to="/stack">
               <button>
-                <h5>Stack / Dependencies</h5>
+                <h5>Stack </h5>
               </button>
             </Link>
           </li>

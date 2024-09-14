@@ -22,6 +22,7 @@
 
 .container > h1 {
   font-size: 7.5vh;
+  text-align: center;
 }
 
 .container > div {
@@ -62,10 +63,10 @@
   margin-left: 1.5vw;
 }
 
-.stackDiv {
-  border-right: 1px solid black;
-}
-
 .container hr {
   color: black;
+}
+
+.container {
+  overflow-y: auto;
 }

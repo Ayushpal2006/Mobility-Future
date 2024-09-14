@@ -81,3 +81,9 @@
     margin-bottom: 2%;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .container div:first-child {
+    border-left: none;
+  }
+}
