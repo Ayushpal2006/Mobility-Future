@@ -59,6 +59,20 @@ app.get("/api/posts", async (req, res) => {
   res.send(result);
 });
 
+app.get("/api/posts/:id", async (req, res) => {
+  const result = await postsCollection.findOne({
+    _id: new mongodb.ObjectId(req.params.id),
+  });
+  res.send(await result);
+});
+
+app.get("/api/user/:id", async (req, res) => {
+  const result = await usersCollection.findOne({
+    _id: new mongodb.ObjectId(req.params.id),
+  });
+  res.send(await result);
+});
+
 // Starting the server
 const PORT = process.env.PORT || 4000;
 
