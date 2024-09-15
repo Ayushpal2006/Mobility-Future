@@ -104,3 +104,15 @@
   text-align: center;
   padding: 5vh;
 }
+
+.imgCont {
+  display: grid;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .aboutCont {
+    overflow-y: auto;
+  }
+}
