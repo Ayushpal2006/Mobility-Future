@@ -78,6 +78,8 @@ export default function Login() {
     } else {
       alert(result.message);
     }
+
+    showLogin();
   };
 
   const handleChange = (e) => {
@@ -127,7 +129,6 @@ export default function Login() {
             Use Other Methods
           </h1>
           <button onClick={showRegister}>Register</button>
-          <button onClick={showDetCont}>Move Forward</button>
         </div>
       </div>
       <div
@@ -166,7 +167,6 @@ export default function Login() {
         <div className={styles.oAuthDiv} id={styles.oAuthDivReg}>
           <h1 className="amsterdam">Use Other Methods</h1>
           <button onClick={showLogin}>Login</button>
-          <button onClick={showDetCont}>Move Forward</button>
         </div>
       </div>
       <div
