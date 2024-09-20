@@ -1,7 +1,7 @@
 import React from "react";
-import wp1 from "../../../images/wp1.jpg";
-import wp2 from "../../../images/wp2.jpg";
-import wp3 from "../../../images/wp3.jpg";
+import wp1 from "../../../images/c1-d.jpg";
+import wp2 from "../../../images/c2-d.jpg";
+import wp3 from "../../../images/c3-d.jpg";
 
 export default function Carousel(props) {
   return (

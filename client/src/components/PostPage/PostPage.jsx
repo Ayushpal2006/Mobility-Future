@@ -33,70 +33,45 @@ export default function PostPage() {
         <h1 className="amsterdam">Creating a Job</h1>
         <div className={`${styles.detContainer} moderustic`}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil culpa
-            dolorem voluptates odio. Ipsa in, voluptates placeat necessitatibus
-            laudantium explicabo, odit quas vero accusamus omnis cupiditate et
-            impedit minus pariatur? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nobis, quasi corrupti. Pariatur doloribus
-            accusamus earum voluptatum reprehenderit cum molestias hic? Esse id
-            iste fuga cupiditate sit ab praesentium magnam odio? Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Totam accusantium neque
-            excepturi debitis nostrum delectus reprehenderit, doloribus beatae?
-            Vero, est laboriosam. Aliquam, exercitationem reiciendis? Aut veniam
-            aspernatur alias numquam placeat. Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Dolor facilis illum optio recusandae
-            amet. Sequi suscipit laborum at distinctio corrupti cupiditate
-            delectus voluptates nostrum, repudiandae fugit eveniet saepe optio
-            possimus? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Alias ex sapiente amet. Ullam sit voluptatum consequuntur velit,
-            nisi aspernatur alias fugit voluptate, modi iusto nemo facere eos?
-            Similique, ratione quod. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nihil culpa dolorem voluptates odio. Ipsa in,
-            voluptates placeat necessitatibus laudantium explicabo, odit quas
-            vero accusamus omnis cupiditate et impedit minus pariatur? Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Nobis, quasi
-            corrupti. Pariatur doloribus accusamus earum voluptatum
-            reprehenderit cum molestias hic? Esse id iste fuga cupiditate sit ab
-            praesentium magnam odio? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Totam accusantium neque excepturi debitis nostrum
-            delectus reprehenderit, doloribus beatae? Vero, est laboriosam.
-            Aliquam, exercitationem reiciendis? Aut veniam aspernatur alias
-            numquam placeat. Lorem ipsum, dolor sit amet consectetur adipisicing
-            elit.
+            At the heart of our business lies a simple but powerful idea:
+            connecting customers with the right truck drivers to move their
+            goods across state lines. By doing this, we're not just transporting
+            packages—we’re driving change. Our platform not only makes
+            interstate logistics easy for customers but also creates a network
+            of job opportunities for truck drivers across the country. Every
+            delivery is a step toward empowering truckers, boosting local
+            economies, and keeping America’s goods moving forward. Through
+            technology, we're unlocking new ways for drivers to work
+            independently, earn more, and thrive in a flexible environment
+            tailored to their skills and schedules.
           </p>
           <div>
             <h3 className="amsterdam">Points to remember:-</h3>
             <ol>
               <li>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Corrupti facilis incidunt enim aliquid odit iusto tenetur.
-                Corporis dignissimos, sequi iure iusto maiores quam vel velit
-                unde ipsa inventore fugit aspernatur.
+                <apan>Accurate Dimensions & Weight</apan>: Measure the length,
+                width, height, and weight of your package precisely to avoid
+                extra charges or delays.
               </li>
               <li>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Tempora, mollitia cum provident numquam amet veniam aliquam
-                voluptate eligendi reiciendis libero necessitatibus est
-                repudiandae quis perspiciatis, non aliquid assumenda sequi
-                expedita?
+                <apan>Fragility & Special Handling</apan>: Clearly state if the
+                package is fragile or requires special handling (e.g.,
+                temperature control, oversized items).
               </li>
               <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                eaque quam, corrupti consequuntur earum quidem non doloribus
-                nulla nam consequatur quia eum sequi iste error suscipit,
-                voluptas qui quos ipsum.
+                <apan>Pickup & Delivery Locations</apan>: Provide exact
+                addresses for both the pickup and delivery points, including any
+                special instructions (gates, access codes, etc.).
               </li>
               <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                quidem nesciunt, dignissimos iste, nulla tenetur praesentium
-                veniam eos earum hic est harum optio consectetur alias aliquam
-                eius quibusdam animi aspernatur?
+                <apan>Contents Declaration</apan>: Describe the contents of the
+                package accurately. Avoid shipping prohibited or restricted
+                items.
               </li>
               <li>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo id
-                tempore placeat nemo exercitationem, facere vitae dolorum
-                repellat et nulla ut suscipit non repudiandae, magni dignissimos
-                minus saepe nesciunt ducimus?
+                Contact Information*: Ensure your contact details are correct
+                for both the sender and recipient in case of any issues during
+                transport.
               </li>
             </ol>
           </div>

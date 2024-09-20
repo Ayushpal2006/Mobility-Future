@@ -6,24 +6,42 @@ export default function TOSPage() {
     <div className={styles.container}>
       <h1 className="amsterdam">Terms of Services</h1>
       <p className="moderustic">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-        animi dignissimos, minus cupiditate voluptate tempora dolor corrupti,
-        nisi blanditiis et adipisci eius atque tempore fuga rerum suscipit enim
-        hic nostrum?
-      </p>
-      <p className="moderustic">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dicta
-        modi sed delectus facilis accusamus libero eveniet ullam, quam eaque
-        adipisci sit ut optio, officia incidunt cupiditate, qui culpa at! Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Ipsum minima ut
-        voluptatum atque sint. Omnis numquam nisi aut accusamus, cum minus
-        possimus voluptas repellat beatae unde. Voluptate odit eligendi tempore.
-      </p>
-      <p className="moderustic">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, repellat
-        placeat inventore excepturi adipisci distinctio numquam. Autem rerum, in
-        nam vero voluptatum quas possimus quam, neque laboriosam sint laudantium
-        impedit!
+        When placing an order on our website, customers should provide detailed
+        information about their package to ensure smooth transportation. Here
+        are
+        <br />
+        <span className={`${styles.bold} ${styles.liHeading}`}>
+          5 key points to remember:
+        </span>
+        <br />
+        <br />
+        <ul>
+          <li>
+            <span className={styles.bold}>Accurate Dimensions & Weight</span>:
+            Measure the length, width, height, and weight of your package
+            precisely to avoid extra charges or delays
+          </li>
+          <li>
+            <span className={styles.bold}>Fragility & Special Handling</span>:
+            Clearly state if the package is fragile or requires special handling
+            (e.g., temperature control, oversized items)
+          </li>
+          <li>
+            <span className={styles.bold}>Pickup & Delivery Locations</span>:
+            Provide exact addresses for both the pickup and delivery points,
+            including any special instructions (gates, access codes, etc.)
+          </li>
+          <li>
+            <span className={styles.bold}>Contents Declaration</span>: Describe
+            the contents of the package accurately. Avoid shipping prohibited or
+            restricted items
+          </li>
+          <li>
+            <span className={styles.bold}>Contact Information</span>: Ensure
+            your contact details are correct for both the sender and recipient
+            in case of any issues during transport
+          </li>
+        </ul>
       </p>
     </div>
   );

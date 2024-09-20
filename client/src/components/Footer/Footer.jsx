@@ -50,10 +50,12 @@ export default function Footer() {
           </li>
           <li>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-              neque nesciunt autem perferendis ut illo sed molestiae possimus
-              pariatur cumque quidem nulla quos ea. Sit illum laboriosam eum
-              itaque accusantium.
+              Our mission is to bridge the gap between people and possibilities
+              by making interstate package transportation seamless and
+              efficient. We aim to empower businesses and individuals alike by
+              providing a reliable platform that connects them with trusted
+              truck drivers, fostering growth and creating opportunities on the
+              road.
             </p>
           </li>
         </ul>

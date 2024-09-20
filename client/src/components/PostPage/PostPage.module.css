@@ -174,3 +174,7 @@ ol li {
   width: 100%;
   text-align: left;
 }
+
+.container li span {
+  font-weight: bold;
+}

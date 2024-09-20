@@ -27,7 +27,19 @@
 
 .container p {
   font-size: 2.5vh;
-  text-align: center;
+  /* text-align: center; */
 
   margin-top: 5vh;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.liHeading {
+  font-size: 3vh;
+}
+
+.container ul {
+  list-style-type: decimal;
 }
