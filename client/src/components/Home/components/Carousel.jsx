@@ -36,22 +36,31 @@ export default function Carousel(props) {
         <div className="carousel-item active">
           <img src={wp1} className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+            <h5>Connecting Roads, Delivering Futures</h5>
+            <p>
+              How our platform connects customers with drivers, ensuring smooth
+              interstate deliveries while fostering economic opportunities.
+            </p>
           </div>
         </div>
         <div className="carousel-item">
           <img src={wp2} className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <h5>Moving Goods, Creating Jobs</h5>
+            <p>
+              Highlighting how our services generate meaningful work for drivers
+              while efficiently transporting goods across state lines.
+            </p>
           </div>
         </div>
         <div className="carousel-item">
           <img src={wp3} className="d-block w-100" alt="..." />
           <div className="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <h5>Empowering Drivers, Delivering Success</h5>
+            <p>
+              Showcasing how we empower truck drivers with flexible job
+              opportunities, allowing them to achieve success independently.
+            </p>
           </div>
         </div>
       </div>
